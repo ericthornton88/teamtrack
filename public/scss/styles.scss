@@ -1,0 +1,90 @@
+header {
+	background-color: blue;
+	height: 75px;
+	position: relative;
+	right: 0px;
+
+	.nav-logo {
+		position: absolute;
+		display: inline-block;
+		top: 10px;
+		margin-left: 10px;
+	}
+
+	.nav-logo img {
+		height: 50px;
+		width: 50px;
+	}
+
+	.btn-group {
+		position: absolute;
+		right: 10px;
+		top: 15px;
+		// background-color: yellow;
+		// height: 50px;
+		// width: 150px;
+		// display: inline-block;
+	}
+
+	.expand-btn-group {
+		visibility: hidden;
+	}
+}
+
+.hero {
+	height: 575px;
+	width: 1280px;
+	background-image: url('../img/muscle.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+
+	div {
+		position: absolute;
+		margin-top: 30px;
+		font-size: 30px; 
+		background-color: red;
+	}
+
+	:first-child {
+		left: 30px;
+	}
+
+	:last-child {
+		right: 30px;
+		width: 300px;
+	}
+}
+
+.main-container {
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: lightblue;
+	min-height: 200px;
+	padding: 50px 50px 25px 25px;
+
+
+	aside {
+		position: absolute;
+		height: 150px;
+		width: 150px;
+		background-color: red;
+		display: inline-block;
+	}
+
+	article {
+		margin-left: 250px;
+		background-color: yellow;
+		display: inline-block;
+		font-size: 50px;
+	}
+
+}
+
+footer {
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: 200px;
+	background-color: orange;
+}
