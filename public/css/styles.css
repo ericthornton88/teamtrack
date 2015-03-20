@@ -1,22 +1,36 @@
 header {
   background-color: blue;
   height: 75px;
-  position: relative;
-  right: 0px; }
+  right: 0px;
+  left: 0; }
+  header .nav-container {
+    position: relative;
+    width: 960px;
+    background-color: green;
+    margin: 0 auto;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
   header .nav-logo {
-    position: absolute;
-    display: inline-block;
-    top: 10px;
-    margin-left: 10px; }
-  header .nav-logo img {
+    display: inline-block; }
+  header .nav-logo > img {
     height: 50px;
     width: 50px; }
-  header .btn-group {
+  header nav {
+    display: inline-block;
     position: absolute;
-    right: 10px;
-    top: 15px; }
-  header .expand-btn-group {
-    visibility: hidden; }
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
+    header nav a {
+      font-size: 20px;
+      font-weight: bold;
+      color: white; }
+    header nav > * + * {
+      margin-left: 20px; }
 
 .hero {
   height: 575px;
@@ -36,23 +50,31 @@ header {
     width: 300px; }
 
 .main-container {
-  top: 0;
-  right: 0;
-  left: 0;
+  width: 960px;
+  margin: 10px auto;
   background-color: lightblue;
   min-height: 200px;
-  padding: 50px 50px 25px 25px; }
-  .main-container aside {
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    background-color: red;
-    display: inline-block; }
-  .main-container article {
-    margin-left: 250px;
+  text-align: center; }
+  .main-container .feature-container {
     background-color: yellow;
     display: inline-block;
-    font-size: 50px; }
+    padding: 10px; }
+    .main-container .feature-container > * + * {
+      margin-top: 10px; }
+    .main-container .feature-container .img {
+      height: 100px;
+      width: 100px;
+      font-size: 75px;
+      background-color: blue;
+      margin-bottom: 10px;
+      margin: auto; }
+    .main-container .feature-container .title {
+      background-color: pink; }
+    .main-container .feature-container .content {
+      width: 200px;
+      background-color: blue; }
+  .main-container > * + * {
+    margin-left: 100px; }
 
 footer {
   right: 0;
@@ -60,3 +82,14 @@ footer {
   bottom: 0;
   height: 200px;
   background-color: orange; }
+  footer .copyright {
+    position: relative;
+    background-color: pink;
+    display: inline-block;
+    bottom: 0; }
+  footer .footer-links {
+    background-color: green;
+    display: inline-block;
+    float: right; }
+    footer .footer-links a {
+      color: white; }
