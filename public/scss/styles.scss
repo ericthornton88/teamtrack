@@ -13,11 +13,7 @@ header {
 		transform: translate(0, -50%);
 	}
 
-	.nav-logo {
-		display: inline-block;
-	}
-
-	.nav-logo > img {
+	.nav-logo img {
 		height: 50px;
 		width: 50px;
 	}
@@ -43,6 +39,15 @@ header {
 	// .expand-btn-group {
 	// 	visibility: hidden;
 	// }
+}
+
+main {
+	height: 510px;
+	position: relative;
+
+	> div {
+		padding-top: 100px;
+	}
 }
 
 .hero {
@@ -113,23 +118,28 @@ footer {
 	right: 0;
 	left: 0;
 	bottom: 0;
-	height: 200px;
+	height: 100px;
 	background-color: orange;
+	position: relative;
 
 	.copyright {
-		position: relative;
 		background-color: pink;
 		display: inline-block;
-		bottom: 0;
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
 	}
 
 	.footer-links {
 		background-color: green;
 		display: inline-block;
-		float: right;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
 
 		a {
 			color: white;
+			display: block;
 		}
 	}
 }

@@ -16,12 +16,12 @@
 	
 	<header>
 		<div class="nav-container">
-			<div class="nav-logo"><img src="../img/muscleLogo.jpeg" alt=""></div>
+			<div class="nav-logo"><a href="/"><img src="../img/muscleLogo.jpeg" alt=""></a></div>
 			<nav>
 				<a href="#">Demo</a>
 				<a href="#">Products</a>
 				<a href="#">About Us</a>
-				<a href="#">Login</a>
+				<a href="/auth/login">Login</a>
 			</nav>
 		</div>
 	</header>
@@ -33,7 +33,7 @@
 		@show
 
 	<footer>
-		<div class="copyright">content</div>
+		<div class="copyright">&copy Eric</div>
 		<div class="footer-links">
 			<a href="#">Home</a>
 			<a href="#">Login/Register</a>

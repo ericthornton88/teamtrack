@@ -5,7 +5,7 @@
 		<div>Don't kid yourself</div>
 		<div>Know your strengths</div>
 	</div>
-	<main>
+	<div class="feature">
 		<div class="main-container">
 		<div class="feature-container">
 			<div class="img"><i class="fa fa-line-chart"></i></div>
@@ -23,5 +23,5 @@
 			<div class="content">Easy to work with support staff that makes work flow</div>
 		</div>
 		</div>
-	</main>
+	</div>
 @endsection

@@ -12,9 +12,7 @@ header {
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%); }
-  header .nav-logo {
-    display: inline-block; }
-  header .nav-logo > img {
+  header .nav-logo img {
     height: 50px;
     width: 50px; }
   header nav {
@@ -31,6 +29,12 @@ header {
       color: white; }
     header nav > * + * {
       margin-left: 20px; }
+
+main {
+  height: 510px;
+  position: relative; }
+  main > div {
+    padding-top: 100px; }
 
 .hero {
   height: 575px;
@@ -80,16 +84,21 @@ footer {
   right: 0;
   left: 0;
   bottom: 0;
-  height: 200px;
-  background-color: orange; }
+  height: 100px;
+  background-color: orange;
+  position: relative; }
   footer .copyright {
-    position: relative;
     background-color: pink;
     display: inline-block;
-    bottom: 0; }
+    position: absolute;
+    bottom: 10px;
+    left: 10px; }
   footer .footer-links {
     background-color: green;
     display: inline-block;
-    float: right; }
+    position: absolute;
+    bottom: 10px;
+    right: 10px; }
     footer .footer-links a {
-      color: white; }
+      color: white;
+      display: block; }
