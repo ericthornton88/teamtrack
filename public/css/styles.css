@@ -102,3 +102,49 @@ footer {
     footer .footer-links a {
       color: white;
       display: block; }
+
+section {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 250px;
+  background-color: #E93C4F; }
+  section .graph {
+    background-color: #2D4255;
+    position: absolute;
+    height: 500px;
+    width: 900px;
+    margin-left: 20px;
+    top: 100px; }
+
+.user-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px 0px;
+  background-color: #727272;
+  width: 250px;
+  text-align: center;
+  color: white; }
+  .user-nav img {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: #2D4255;
+    margin-bottom: 10px; }
+  .user-nav .line {
+    background-color: #2D4255;
+    width: 250px;
+    height: 5px;
+    margin: 20px 0px; }
+
+.nav-container > div:first-child {
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 10px; }
+.nav-container div {
+  text-align: left; }
+.nav-container input {
+  margin: 10px; }
