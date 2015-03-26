@@ -1,10 +1,10 @@
 <?php namespace App\Http\Controllers;
 
-use App\Library\PlayerModel;
+use App\Library\CoachModel;
 use Carbon\Carbon;
 
 
-class PlayerController extends Controller {
+class CoachController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -30,23 +30,15 @@ class PlayerController extends Controller {
 	 */
 	public function index()
 	{
-		
-		return view('player/profile');
+		$results = self::getAllPlayers();
+		return view('coach/profile', ['results'=>$results]);
 	}
 
-	public function getAll()
+	public function getAllPlayers()
 	{
-		$player = new PlayerModel();
-		$overall = $player->getAll(\Auth::User()->user_id);
-		$keys = [];
-		$values = [];
-		foreach ($overall as $pair) {
-			$date = Carbon::createFromFormat('Y-m-d', $pair->created_at);
-			$keys[] = $date->toFormattedDateString();
-			$values[] = $pair->total;
-		}
-
-		return [$keys, $values];
+		$coach = new CoachModel();
+		$overall = $coach->getAllPlayers();
+		return ($overall);
 	}
 
 	public function chartData($metric)

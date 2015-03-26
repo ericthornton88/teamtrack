@@ -16,6 +16,10 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 
 Route::get('player/profile', 'PlayerController@index');
+Route::get('coach/profile', 'CoachController@index');
+
+Route::get('api/chartData/{metric}', 'PlayerController@chartData');
+Route::get('api/chartData', 'PlayerController@getAll');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

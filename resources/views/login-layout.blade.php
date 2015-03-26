@@ -7,49 +7,10 @@
 	<link rel="stylesheet" href="<?php echo asset('css/styles.css')?>" type="text/css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<script src="/bower_components/handlebars/handlebars.js"></script>
 	<script src="/bower_components/Chart.js/Chart.js"></script>
 	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="../js/main.js"></script>
-
-	<script>
-		var lineChartData = {
-			labels : ["January","February","March","April","May","June","July"],
-			datasets : [
-				{
-					label: "My First dataset",
-					fillColor : "rgba(220,220,220,0.2)",
-					strokeColor : "rgba(220,220,220,1)",
-					pointColor : "rgba(220,220,220,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(220,220,220,1)",
-					data : [65, 59, 80, 81, 56, 55, 40]
-				},
-				{
-					label: "My Second dataset",
-					fillColor : "rgba(151,187,205,0.2)",
-					strokeColor : "rgba(151,187,205,1)",
-					pointColor : "rgba(151,187,205,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(151,187,205,1)",
-					data : [28, 48, 40, 19, 86, 27, 90]
-				}
-			]
-
-		}
-
-	window.onload = function(){
-		var ctx = document.getElementById("canvas").getContext("2d");
-		window.myLine = new Chart(ctx).Line(lineChartData, {
-			responsive: true
-		});
-	}
-
-
-	</script>
 </head>
 <body>
 	
@@ -70,6 +31,7 @@
 		<div class="name">{{ Auth::User()->first_name }}</div>
 		<div class="line"></div>
 		<div class="nav-container">
+			@section('time-player')
 			<div class="container-title">Time</div>
 			<div class="content">
 				<form action="">
@@ -78,30 +40,34 @@
 					<input type="radio" name="time">60 Days
 				</form>
 			</div>	
+			@show
 		</div>
 		<div class="line"></div>
 		<div class="nav-container">
 			<div class="container-title">Categories</div>
-			<div>
-				<input type="checkbox">Sleep Length
+			<div class="overall">
+				<input type="radio" name='category' value="overall">Overall
 			</div>
-			<div>
-				<input type="checkbox">Sleep Quality
+			<div class="sleep_length">
+				<input type="radio" name='category' value="sleep_length">Sleep Length
 			</div>
-			<div>
-				<input type="checkbox">Tiredness Sensation
+			<div class="sleep_quality">
+				<input type="radio" name='category' value="sleep_quality">Sleep Quality
 			</div>
-			<div>
-				<input type="checkbox">Training Willingness
+			<div class="tiredness_sensation">
+				<input type="radio" name='category' value="tiredness_sensation">Tiredness Sensation
 			</div>
-			<div>
-				<input type="checkbox">Appetite
+			<div class="training_willingness">
+				<input type="radio" name='category' value="training_willingness">Training Willingness
 			</div>
-			<div>
-				<input type="checkbox">Soreness
+			<div class="appetite">
+				<input type="radio" name='category' value="appetite">Appetite
 			</div>
-			<div>
-				<input type="checkbox">Nutrition
+			<div class="soreness">
+				<input type="radio" name='category' value="soreness">Soreness
+			</div>
+			<div class="nutrition">
+				<input type="radio" name='category' value="nutrition">Nutrition
 			</div>
 		</div>
 	</div>

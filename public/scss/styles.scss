@@ -1,5 +1,9 @@
 $nav-user-width: 250px;
 
+* {
+	font-family: PT Sans;
+}
+
 
 
 
@@ -155,14 +159,14 @@ section {
 	top: 0;
 	right: 0;
 	left: $nav-user-width;
-	background-color: #E93C4F;
+	background-color: #D3D3D3;
 
 	.graph {
-		background-color: #2D4255;
+
 		position: absolute;
 		height: 500px;
 		width: 900px;
-		margin-left: 20px;
+		margin-left: 80px;
 		top: 100px;
 	}
 }
@@ -197,9 +201,10 @@ section {
 .nav-container {
 
 	> div:first-child {
-		font-size: 10px;
+		font-size: 12px;
 		font-weight: bold;
 		margin-bottom: 10px;
+		margin-left: 10px;
 	}
 
 	div {
@@ -211,4 +216,35 @@ section {
 		
 	}
 }
+
+.active {
+	background-color: yellow;
+}
+
+// .overall {
+
+// }
+// .tiredness_sensation {
+// 	color: red;
+// }
+// .sleep_length {
+// 	color: red;
+// }
+// .sleep_quality {
+// 	color: red;
+// }
+// .appetite {
+// 	color: red;
+// }
+// .soreness {
+// 	color: red;
+// }
+// .nutrition {
+// 	color: red;
+// }
+// .training_willingness {
+// 	color: red;
+// }
+
+
 
