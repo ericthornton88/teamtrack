@@ -15,11 +15,17 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+
 Route::get('player/profile', 'PlayerController@index');
+Route::get('player/addInfo', 'PlayerController@editAdd');
+
 Route::get('coach/profile', 'CoachController@index');
 
-Route::get('api/chartData/{metric}', 'PlayerController@chartData');
-Route::get('api/chartData', 'PlayerController@getAll');
+Route::get('api/chartData/{user_id}/{metric}', 'PlayerController@chartData');
+Route::get('api/chartData/{user_id}', 'PlayerController@getAll');
+
+Route::get('api/coachChartData/{user_id}', 'CoachController@getAll');
+Route::get('api/coachChartData/{user_id}/{metric}', 'CoachController@getAll');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

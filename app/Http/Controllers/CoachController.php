@@ -41,6 +41,21 @@ class CoachController extends Controller {
 		return ($overall);
 	}
 
+	public function getAll($user_id)
+	{
+		$coach = new CoachModel();
+		$overall = $coach->getAll($user_id);
+		$keys = [];
+		$values = [];
+		foreach ($overall as $pair) {
+			$date = Carbon::createFromFormat('Y-m-d', $pair->created_at);
+			$keys[] = $date->toFormattedDateString();
+			$values[] = $pair->total;
+		}
+
+		return [$keys, $values];
+	}
+
 	public function chartData($metric)
 	{
 		//call model and get the info

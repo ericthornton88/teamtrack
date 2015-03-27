@@ -28,7 +28,7 @@
 
 	<div class="user-nav">
 		<img src="" alt="">
-		<div class="name">{{ Auth::User()->first_name }}</div>
+		<div class="name">Hello {{ Auth::User()->first_name }}</div>
 		<div class="line"></div>
 		<div class="nav-container">
 			@section('time-player')
@@ -39,12 +39,14 @@
 					<input type="radio" name="time">30 Days
 					<input type="radio" name="time">60 Days
 				</form>
-			</div>	
+			</div>
 			@show
 		</div>
 		<div class="line"></div>
-		<div class="nav-container">
-			<div class="container-title">Categories</div>
+		<div class="nav-container all-categories">
+			<div class="container-title">Categories
+				<input id="hidden-id" type="hidden" value="{{ Auth::User()->user_id }}">
+			</div>
 			<div class="overall">
 				<input type="radio" name='category' value="overall">Overall
 			</div>

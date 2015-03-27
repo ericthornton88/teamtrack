@@ -30,9 +30,33 @@
 							</div>
 
 							<div class="form-group">
+								<label class="col-md-4 control-label">Last Name</label>
+								<div class="col-md-6">
+									<input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label">Phone</label>
+								<div class="col-md-6">
+									<input type="text" class="form-control" name="phone" value="{{ old('phone') }}">
+								</div>
+							</div>
+
+							<div class="form-group">
 								<label class="col-md-4 control-label">E-Mail Address</label>
 								<div class="col-md-6">
 									<input type="email" class="form-control" name="email" value="{{ old('email') }}">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label">Role</label>
+								<div class="col-md-6">
+									<select name="is_admin">
+										<option value="0">Player</option>
+										<option value="1">Coach</option>
+									</select>
 								</div>
 							</div>
 

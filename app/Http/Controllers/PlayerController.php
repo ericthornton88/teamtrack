@@ -34,10 +34,14 @@ class PlayerController extends Controller {
 		return view('player/profile');
 	}
 
-	public function getAll()
+	public function editAdd() {
+		return view('player/addInfo');
+	}
+
+	public function getAll($user_id)
 	{
 		$player = new PlayerModel();
-		$overall = $player->getAll(\Auth::User()->user_id);
+		$overall = $player->getAll($user_id);
 		$keys = [];
 		$values = [];
 		foreach ($overall as $pair) {
@@ -49,12 +53,12 @@ class PlayerController extends Controller {
 		return [$keys, $values];
 	}
 
-	public function chartData($metric)
+	public function chartData($user_id, $metric)
 	{
 		//call model and get the info
 
 		$player = new PlayerModel();
-		$getChoice = $player->getGraphChoice(\Auth::User()->user_id, $metric);
+		$getChoice = $player->getGraphChoice($user_id, $metric);
 		$keys = [];
 		$values = [];
 		foreach ($getChoice as $pair) {
