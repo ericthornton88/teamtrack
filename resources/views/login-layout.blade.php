@@ -9,22 +9,19 @@
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 	<script src="/bower_components/handlebars/handlebars.js"></script>
 	<script src="/bower_components/Chart.js/Chart.js"></script>
-	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
 	<script src="../js/main.js"></script>
 </head>
 <body>
 	
-	<!-- <header>
-		<div class="nav-container">
-			<div class="nav-logo"><a href="/"><img src="../img/muscleLogo.jpeg" alt=""></a></div>
-			<nav>
-				<a href="#">Demo</a>
-				<a href="#">Products</a>
-				<a href="#">About Us</a>
-				<a href="/auth/login">Login</a>
-			</nav>
+	<div class="user-options">
+		<div>User</div>
+		<div>
+			<div>Hey</div>
+			<div>there</div>
+			<div>hi</div>
 		</div>
-	</header> -->
+	</div>
 
 	<div class="user-nav">
 		<img src="" alt="">
@@ -32,17 +29,9 @@
 		<div class="line"></div>
 		<div class="nav-container">
 			@section('time-player')
-			<div class="container-title">Time</div>
-			<div class="content">
-				<form action="">
-					<input type="radio" name="time">Week
-					<input type="radio" name="time">30 Days
-					<input type="radio" name="time">60 Days
-				</form>
-			</div>
+			
 			@show
 		</div>
-		<div class="line"></div>
 		<div class="nav-container all-categories">
 			<div class="container-title">Categories
 				<input id="hidden-id" type="hidden" value="{{ Auth::User()->user_id }}">

@@ -12,6 +12,7 @@
 			<button>Submit</button>
 		</form>
 	</div>
+	<div class="line"></div>
 
 @endsection
 

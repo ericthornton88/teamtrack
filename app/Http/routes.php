@@ -27,6 +27,8 @@ Route::get('api/chartData/{user_id}', 'PlayerController@getAll');
 Route::get('api/coachChartData/{user_id}', 'CoachController@getAll');
 Route::get('api/coachChartData/{user_id}/{metric}', 'CoachController@getAll');
 
+Route::get('api/addPlayerInfo/{user_id}', 'PlayerController@getEditInfo');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

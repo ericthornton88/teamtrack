@@ -1,14 +1,36 @@
 
 var chartData = [];
 
+// var renderDate = function(user_id) {
+// 	var source = $('#template-date').html();
+// 	var template = Handlebars.compile(source);
+// 	console.log(user_id)
+// 	var output = template({
+// 		date: duel.title,
+// 		details: duel.details,
+// 		pro: duel.description,
+// 		con: duel.description
+// 	});
+	
+// 	return output;
+
+// }
+
+// var renderDateDropdown = function() {
+// 	var user_id = $('#get-dates-id').val()
+// 	$('body').find('.input-form').append(renderDate(user_id));
+
+// }
+
 function getChartData (url) {
 	$.get( url , function( data ) {
 		var lineChartData = {
 			labels : data[0],
 			datasets : [
 				{
-					strokeColor : 'black',
-					data : data[1]
+					strokeColor : '#2D4255',
+					data : data[1],
+					pointColor: "#ADBCC3"
 				},
 			]
 		};
@@ -28,7 +50,7 @@ function getChartData (url) {
 					+'</ul>'
 		});
 	});
-}
+};
 
 $(function() {
   	$('input').on('click', function() {
@@ -70,13 +92,19 @@ $(function() {
   	$('body').on('click', '#edit-entry', function() {
   	  	console.log('edit');
   	  	$('section h2').remove()
-  	  	$('.input-form.initial-hide').removeClass()
+  	  	$('.input-form-values.initial-hide').removeClass()
+  	  	var user_id = $('body').find('#get-dates-id').val()
+
+  	  	// renderDateDropdown();
+  	  	$.get("/api/addPlayerInfo/" + user_id , function( data ) {
+			//data will equal all the dates
+		})
   	})
 
   	$('body').on('click', '#add-entry', function() {
   	  	console.log('add');
   	  	$('section h2').remove()
-  	  	$('.input-form-values.initial-hide').removeClass()
+  	  	$('.input-form.initial-hide').removeClass()
   	})
 })
 

@@ -24,6 +24,17 @@ class PlayerModel {
 
 		return $results;
 	}
+	public function getDates($user_id) {
+		$results = DB::select('
+			SELECT created_at
+			FROM metric
+			WHERE user_id = :user_id
+			ORDER BY created_at
+		', [':user_id' => $user_id]);
+
+		return $results;
+	}
+
 
 }
 

@@ -2,22 +2,23 @@
   font-family: PT Sans; }
 
 header {
-  background-color: blue;
   height: 75px;
   right: 0px;
-  left: 0; }
+  left: 0;
+  background-color: #2D4255; }
   header .nav-container {
     position: relative;
     width: 960px;
-    background-color: green;
     margin: 0 auto;
     top: 50%;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%); }
-  header .nav-logo img {
-    height: 50px;
-    width: 50px; }
+  header .nav-logo > a {
+    font-size: 50px;
+    color: #DCDCD4; }
+    header .nav-logo > a:hover {
+      color: #E93C4F; }
   header nav {
     display: inline-block;
     position: absolute;
@@ -28,8 +29,10 @@ header {
     transform: translate(0, -50%); }
     header nav a {
       font-size: 20px;
-      font-weight: bold;
-      color: white; }
+      color: #DCDCD4;
+      font-family: Roboto; }
+      header nav a:hover {
+        color: #E93C4F; }
     header nav > * + * {
       margin-left: 20px; }
 
@@ -42,14 +45,14 @@ main {
 .hero {
   height: 575px;
   width: 1280px;
-  background-image: url('../img/muscle.jpg');
-  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0.55)), color-stop(10%, rgba(45, 66, 85, 0.35)), color-stop(100%, rgba(45, 66, 85, 0.15))), url('../img/FunnySportNerd.jpg') no-repeat;
   background-size: cover; }
   .hero div {
     position: absolute;
     margin-top: 30px;
     font-size: 30px;
-    background-color: red; }
+    color: #DCDCD4;
+    font-weight: bold; }
   .hero :first-child {
     left: 30px; }
   .hero :last-child {
@@ -58,12 +61,11 @@ main {
 
 .main-container {
   width: 960px;
-  margin: 10px auto;
-  background-color: lightblue;
+  margin: 0px auto;
+  padding: 10px 0px;
   min-height: 200px;
   text-align: center; }
   .main-container .feature-container {
-    background-color: yellow;
     display: inline-block;
     padding: 10px; }
     .main-container .feature-container > * + * {
@@ -72,14 +74,10 @@ main {
       height: 100px;
       width: 100px;
       font-size: 75px;
-      background-color: blue;
       margin-bottom: 10px;
       margin: auto; }
-    .main-container .feature-container .title {
-      background-color: pink; }
     .main-container .feature-container .content {
-      width: 200px;
-      background-color: blue; }
+      width: 200px; }
   .main-container > * + * {
     margin-left: 100px; }
 
@@ -88,23 +86,22 @@ footer {
   left: 0;
   bottom: 0;
   height: 100px;
-  background-color: orange;
-  position: relative; }
+  background-color: #2D4255;
+  position: relative;
+  color: #DCDCD4; }
   footer .copyright {
-    background-color: pink;
     display: inline-block;
     position: absolute;
     bottom: 10px;
     left: 10px; }
   footer .footer-links {
-    background-color: green;
     display: inline-block;
     position: absolute;
     bottom: 10px;
     right: 10px; }
     footer .footer-links a {
-      color: white;
-      display: block; }
+      display: block;
+      color: #DCDCD4; }
 
 section {
   position: absolute;
@@ -112,7 +109,7 @@ section {
   top: 0;
   right: 0;
   left: 250px;
-  background-color: #D3D3D3; }
+  background-color: #DCDCD4; }
   section .graph {
     position: absolute;
     height: 500px;
@@ -129,7 +126,7 @@ section {
   background-color: #727272;
   width: 250px;
   text-align: center;
-  color: white; }
+  color: #DCDCD4; }
   .user-nav img {
     position: relative;
     height: 100px;
@@ -157,3 +154,10 @@ section {
 
 .initial-hide {
   visibility: hidden; }
+
+.user-options {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  z-index: 100; }

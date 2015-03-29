@@ -38,6 +38,18 @@ class PlayerController extends Controller {
 		return view('player/addInfo');
 	}
 
+	public function getEditInfo($user_id) {
+		$player = new PlayerModel();
+		$dates = $player->getDates($user_id);
+		$allDates = [];
+		foreach ($dates as $date) {
+			$indyDate = Carbon::createFromFormat('Y-m-d', $date->created_at);
+			$allDates[] = $date->toFormattedDateString();
+		}
+		dd($allDates);
+		return $allDates;
+	}
+
 	public function getAll($user_id)
 	{
 		$player = new PlayerModel();

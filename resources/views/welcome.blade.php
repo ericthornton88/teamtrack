@@ -2,8 +2,8 @@
 
 @section('content')
 	<div class="hero">
-		<div>Don't kid yourself</div>
-		<div>Know your strengths</div>
+		{{-- <div>Don't kid yourself</div>
+		<div>Know your strengths</div> --}}
 	</div>
 	<div class="feature">
 		<div class="main-container">
