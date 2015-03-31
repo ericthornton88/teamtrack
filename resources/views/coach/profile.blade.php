@@ -28,7 +28,7 @@
 	</div>
 	<h1 class="coach-h1">Please select a player and category</h1>
 	<div class="graph">
-		<canvas id="canvas"></canvas>
+		<canvas id="canvas" height="125px"></canvas>
 	</div>
 	<div class="consistency-tracker">
 		<div class="consistency-holder">

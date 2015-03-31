@@ -14,7 +14,7 @@
 		</div>
 	</div>
 	<div class="graph">
-		<canvas id="canvas" ></canvas>
+		<canvas id="canvas" height="125px" ></canvas>
 	</div>
 	<div class="consistency-tracker">
 		<div class="consistency-holder">
