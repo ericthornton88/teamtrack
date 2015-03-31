@@ -2,13 +2,23 @@
 
 @section('content')
 <section>
+	<div class="user-nav-button-holder">
+		<div class="user-nav-button">
+			<i class="fa fa-user"></i>
+		</div>
+		<div class="user-nav-list initial-hide">
+			<a href="/"><i class="fa fa-home"></i>Profile</a>
+			<a href="/player/addInfo"><i class="fa fa-pencil"></i>Add/Edit</a>
+			<a href="/auth/logout"><i class="fa fa-sign-out"></i>Logout</a>
+		</div>
+	</div>
 	<input id="get-dates-id" type="hidden" value="{{Auth::User()->user_id}}">
 
 	<div id="edit-entry">
-		<h2>Edit</h2>
+		<h2>EDIT</h2>
 	</div>
 	<div id="add-entry">
-		<h2>Add</h2>
+		<h2>ADD</h2>
 	</div>
 	<form action="/player/updateInfo" method="POST" class="input-form initial-hide">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -30,13 +40,15 @@
 </script>
 
 <script id="template-input-values" type="text/x-handlebars-template">
-	<div class="handleth">@{{pname}}: 
+	<div class="handleth">
+		<label>@{{pname}}: </label>
 		<input type="text" name="@{{uname}}"value="@{{value}}">
 	</div>
 </script>
 
 <script id="template-blank-input" type="text/x-handlebars-template">
-	<div class="handleth">@{{pname}}: 
+	<div class="handleth">
+		<label>@{{pname}}: </label>
 		<input type="text" name="@{{uname}}">
 	</div>
 </script>

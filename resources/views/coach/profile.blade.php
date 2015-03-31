@@ -1,7 +1,7 @@
 @extends('login-layout')
 
 @section('time-player')
-	<div class="container-title">Time</div>
+	<div class="container-title">Player</div>
 	<div class="content">
 		<form action="">
 			<select id="coach-choose-player">
@@ -21,6 +21,22 @@
 	<h1>Please select a player and category</h1>
 	<div class="graph">
 		<canvas id="canvas"></canvas>
+	</div>
+	<div class="consistency-tracker">
+		<div class="consistency-holder">
+			<div>
+				<h1>43</h1>
+				<p>Dates Entered</p>
+			</div>
+			<div>
+				<h1>12</h1>
+				<p>Current Streak</p>
+			</div>
+			<div>
+				<h1>15</h1>
+				<p>Streak Long</p>
+			</div>	
+		</div>
 	</div>
 </section>
 @endsection

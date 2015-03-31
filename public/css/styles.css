@@ -116,7 +116,17 @@ section {
   top: 0;
   right: 0;
   left: 250px;
-  background-color: #DCDCD4; }
+  background-color: #DCDCD4;
+  color: #055DAD; }
+  section > h1 {
+    position: absolute;
+    top: 220px;
+    left: 300px; }
+  section button {
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #DCDCD4;
+    background-color: #DCDCD4; }
   section .graph {
     position: absolute;
     margin-left: 25px;
@@ -124,16 +134,88 @@ section {
     width: 950px;
     top: 50px; }
   section .current-category {
+    margin: 10px;
     display: inline-block;
-    background-color: yellow;
-    font-size: 30px; }
-  section .consistency-tracker {
-    position: absolute;
-    height: 150px;
+    font-size: 30px;
+    font-weight: bold; }
+  section form {
+    display: inline-block;
+    background-color: #ADBCC3;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 350px;
+    top: 120px;
+    position: absolute; }
+    section form input {
+      position: relative;
+      float: right;
+      font-weight: bold; }
+    section form label {
+      padding-right: 10px;
+      font-weight: bold;
+      position: relative;
+      top: 3px; }
+    section form button {
+      position: relative;
+      left: 41%; }
+
+.user-nav-button-holder {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  padding: 10px;
+  text-align: right; }
+  .user-nav-button-holder .user-nav-button {
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    right: 0px;
+    text-align: center;
+    background-color: #ADBCC3;
+    padding: 3px 15px; }
+    .user-nav-button-holder .user-nav-button:hover {
+      background-color: #E93C4F; }
+    .user-nav-button-holder .user-nav-button .fa {
+      font-size: 35px; }
+  .user-nav-button-holder .user-nav-list {
+    position: relative;
     background-color: white;
-    bottom: 0;
-    right: 0;
-    left: 0; }
+    z-index: 1;
+    padding: 15px;
+    border-radius: 3px; }
+    .user-nav-button-holder .user-nav-list a {
+      display: block;
+      text-align: left;
+      font-size: 18px;
+      font-weight: bold; }
+      .user-nav-button-holder .user-nav-list a .fa {
+        margin-right: 15px; }
+
+.consistency-tracker {
+  position: absolute;
+  height: 140px;
+  background-color: #DCDCD4;
+  border-top: 5px solid black;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+  .consistency-tracker .consistency-holder {
+    width: 960px;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 15px; }
+    .consistency-tracker .consistency-holder div {
+      display: inline-block;
+      width: 200px;
+      color: #055DAD; }
+      .consistency-tracker .consistency-holder div p {
+        font-size: 18px; }
+      .consistency-tracker .consistency-holder div h1 {
+        font-size: 50px;
+        font-weight: bold;
+        margin-bottom: 0; }
+    .consistency-tracker .consistency-holder > * + * {
+      margin-left: 100px; }
 
 .user-nav {
   position: absolute;
@@ -145,12 +227,17 @@ section {
   width: 250px;
   text-align: center;
   color: #DCDCD4; }
-  .user-nav img {
+  .user-nav .image {
     position: relative;
+    left: 50%;
+    margin-left: -50px;
     height: 100px;
     width: 100px;
     background-color: #2D4255;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    border: 1px solid black; }
+    .user-nav .image .fa {
+      font-size: 60px; }
   .user-nav .line {
     background-color: black;
     width: 250px;
@@ -167,6 +254,31 @@ section {
 .nav-container input {
   margin: 10px; }
 
+#edit-entry, #add-entry {
+  display: inline-block;
+  position: relative;
+  background-color: #ADBCC3;
+  border-radius: 10px;
+  padding: 30px;
+  top: 275px;
+  margin-left: 180px; }
+  #edit-entry h2, #add-entry h2 {
+    margin: 0;
+    font-size: 100px;
+    font-weight: bold; }
+
+.temp-dropdown-menu {
+  display: inline-block;
+  position: relative;
+  background-color: #ADBCC3;
+  border-radius: 10px;
+  padding: 30px;
+  top: 275px;
+  margin-left: 380px; }
+
+#date-dropdown {
+  font-size: 20px; }
+
 .active {
   background-color: yellow; }
 
@@ -181,4 +293,4 @@ section {
   z-index: 100; }
 
 .handleth {
-  display: block; }
+  padding: 10px; }

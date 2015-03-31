@@ -91,6 +91,10 @@ function getChartData (url) {
 
 $(function() {
 
+	$('section').on('click', '.user-nav-button', function() {
+	  	$(this).parent().find('.user-nav-list').toggleClass('initial-hide');
+	})
+
 	$('.all-categories').on('click', 'input', function() {
 	  	var value = $(this).parent().text()
 	  	console.log(value)
@@ -100,7 +104,7 @@ $(function() {
 	})
 
   	$('input').on('click', function() {
-  		$(this).parents('body').find('section h1').remove();
+  		$(this).parents('body').find('section > h1').remove();
   		var container = $(this).parents('.all-categories').find('.container-title');
   		var find_hidden = container.find('#hidden-id');
 
@@ -116,7 +120,7 @@ $(function() {
 
   	$('.content').on('click', 'button', function(e) {
   	  	e.preventDefault();
-  	  	$(this).parents('body').find('section h1').remove();
+  	  	$(this).parents('body').find('section > h1').remove();
   	  	var value = $( "#coach-choose-player option:selected" ).val();
   	  	var hidden_id = $(this).parents('.user-nav').find('#hidden-id')
   	  	hidden_id.remove();
@@ -125,6 +129,8 @@ $(function() {
   	  	console.log('here');
   	  	var url = "/api/chartData/" + value;
   	  	getChartData(url);
+  	  	var new_category = '<div class="current-category">Overall</div>'
+	  	$('section').prepend(new_category);
   	})
 
   	$('body').on('click', '#edit-entry', function() {

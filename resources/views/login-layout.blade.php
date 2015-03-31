@@ -24,7 +24,7 @@
 	</div> --}}
 
 	<div class="user-nav">
-		<img src="" alt="">
+		<div class="image"></div>
 		<div class="name">Hello {{ Auth::User()->first_name }}</div>
 		<div class="line"></div>
 		<div class="nav-container">
