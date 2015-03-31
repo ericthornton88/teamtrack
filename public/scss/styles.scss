@@ -4,10 +4,20 @@ $blue: #2D4255;
 $tan: #DCDCD4;
 $red: #E93C4F;
 $maroon: #A20E30;
+$font-blue: #055DAD;
 
 
 * {
 	font-family: PT Sans;
+}
+
+button {
+	padding: 2px 10px;
+	border-radius: 5px;
+	border: 1px solid $tan;
+	background-color: $tan;
+	color: $font-blue;
+	font-weight: bold;
 }
 
 
@@ -170,24 +180,25 @@ section {
 	right: 0;
 	left: $nav-user-width;
 	background-color:$tan;
-	color: #055DAD;
+	color: $font-blue;
 
 	> h1 {
 		position: absolute;
 		top: 220px;
-		left: 290px;
+		left: 300px;
+		font-weight: bold;
 	}
 
 	.coach-h1 {
 		left: 250px;
 	}
 
-	button {
-		padding: 3px;
-		border-radius: 5px;
-		border: 1px solid $tan;
-		background-color: $tan;
-	}
+	// button {
+	// 	padding: 3px;
+	// 	border-radius: 5px;
+	// 	border: 1px solid $tan;
+	// 	background-color: $tan;
+	// }
 	
 	.graph {
 		position: absolute;
@@ -296,7 +307,7 @@ section {
 			display: inline-block;
 
 			width: 200px;
-			color: #055DAD;
+			color: $font-blue;
 
 			p {
 				font-size: 18px;
@@ -326,6 +337,10 @@ section {
 	width: $nav-user-width;
 	text-align: center;
 	color: $tan;
+
+	select {
+		font-size: 20px;
+	}
 
 	img {
 		position: relative;

@@ -1,6 +1,14 @@
 * {
   font-family: PT Sans; }
 
+button {
+  padding: 2px 10px;
+  border-radius: 5px;
+  border: 1px solid #DCDCD4;
+  background-color: #DCDCD4;
+  color: #055DAD;
+  font-weight: bold; }
+
 header {
   height: 75px;
   right: 0px;
@@ -121,14 +129,10 @@ section {
   section > h1 {
     position: absolute;
     top: 220px;
-    left: 290px; }
+    left: 300px;
+    font-weight: bold; }
   section .coach-h1 {
     left: 250px; }
-  section button {
-    padding: 3px;
-    border-radius: 5px;
-    border: 1px solid #DCDCD4;
-    background-color: #DCDCD4; }
   section .graph {
     position: absolute;
     margin-left: 25px;
@@ -229,6 +233,8 @@ section {
   width: 250px;
   text-align: center;
   color: #DCDCD4; }
+  .user-nav select {
+    font-size: 20px; }
   .user-nav img {
     position: relative;
     height: 100px;
