@@ -24,7 +24,7 @@
 	</div> --}}
 
 	<div class="user-nav">
-		<div class="image"></div>
+		<img src="/img/FunnySportNerdProfile.jpg">
 		<div class="name">Hello {{ Auth::User()->first_name }}</div>
 		<div class="line"></div>
 		<div class="nav-container">
@@ -32,6 +32,7 @@
 			
 			@show
 		</div>
+		@section('category-options')
 		<div class="nav-container all-categories">
 			<div class="container-title">Categories
 				<input id="hidden-id" type="hidden" value="{{ Auth::User()->user_id }}">
@@ -61,6 +62,7 @@
 				<input type="radio" name='category' value="nutrition">Nutrition
 			</div>
 		</div>
+		@show
 	</div>
 
 		@yield('content')

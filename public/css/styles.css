@@ -121,7 +121,9 @@ section {
   section > h1 {
     position: absolute;
     top: 220px;
-    left: 300px; }
+    left: 290px; }
+  section .coach-h1 {
+    left: 250px; }
   section button {
     padding: 3px;
     border-radius: 5px;
@@ -227,17 +229,18 @@ section {
   width: 250px;
   text-align: center;
   color: #DCDCD4; }
-  .user-nav .image {
+  .user-nav img {
     position: relative;
-    left: 50%;
-    margin-left: -50px;
     height: 100px;
     width: 100px;
     background-color: #2D4255;
+    border: 1px solid black;
+    border-radius: 50px;
     margin-bottom: 10px;
-    border: 1px solid black; }
-    .user-nav .image .fa {
-      font-size: 60px; }
+    text-align: center; }
+    .user-nav img .fa {
+      font-size: 70px;
+      margin-left: 20px; }
   .user-nav .line {
     background-color: black;
     width: 250px;

@@ -30,6 +30,9 @@ class PlayerController extends Controller {
 	 */
 	public function index()
 	{
+		if (\Auth::User()->is_admin == 1) {
+			return redirect('/coach/profile');
+		}
 		return view('player/profile');
 	}
 

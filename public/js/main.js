@@ -129,6 +129,7 @@ $(function() {
   	  	console.log('here');
   	  	var url = "/api/chartData/" + value;
   	  	getChartData(url);
+  	  	$('body').find('.current-category').remove()
   	  	var new_category = '<div class="current-category">Overall</div>'
 	  	$('section').prepend(new_category);
   	})

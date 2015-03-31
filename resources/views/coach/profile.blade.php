@@ -18,7 +18,15 @@
 
 @section('content')
 <section>
-	<h1>Please select a player and category</h1>
+	<div class="user-nav-button-holder">
+		<div class="user-nav-button">
+			<i class="fa fa-user"></i>
+		</div>
+		<div class="user-nav-list initial-hide">
+			<a href="/auth/logout"><i class="fa fa-sign-out"></i>Logout</a>
+		</div>
+	</div>
+	<h1 class="coach-h1">Please select a player and category</h1>
 	<div class="graph">
 		<canvas id="canvas"></canvas>
 	</div>

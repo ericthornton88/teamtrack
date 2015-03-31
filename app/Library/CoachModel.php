@@ -18,6 +18,7 @@ class CoachModel {
 		$results = DB::select('
 			SELECT * 
 			FROM user
+			WHERE is_admin = 0
 		');
 
 		return $results;

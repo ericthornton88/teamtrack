@@ -1,5 +1,9 @@
 @extends('login-layout')
 
+@section('category-options')
+
+@endsection
+
 @section('content')
 <section>
 	<div class="user-nav-button-holder">

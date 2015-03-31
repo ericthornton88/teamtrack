@@ -175,7 +175,11 @@ section {
 	> h1 {
 		position: absolute;
 		top: 220px;
-		left: 300px;
+		left: 290px;
+	}
+
+	.coach-h1 {
+		left: 250px;
 	}
 
 	button {
@@ -323,18 +327,19 @@ section {
 	text-align: center;
 	color: $tan;
 
-	.image {
+	img {
 		position: relative;
-		left: 50%;
-		margin-left: -50px;
 		height: 100px;
 		width: 100px;
 		background-color: $blue;
-		margin-bottom: 10px;
 		border: 1px solid black;
+		border-radius: 50px;
+		margin-bottom: 10px;
+		text-align: center;
 
 		.fa {
-			font-size: 60px;
+			font-size: 70px;
+			margin-left: 20px;
 		}
 	}
 
