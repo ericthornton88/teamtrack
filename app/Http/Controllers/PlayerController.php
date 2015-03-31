@@ -30,7 +30,6 @@ class PlayerController extends Controller {
 	 */
 	public function index()
 	{
-		
 		return view('player/profile');
 	}
 
@@ -38,16 +37,47 @@ class PlayerController extends Controller {
 		return view('player/addInfo');
 	}
 
+	public function updateInfo() {
+		$user_id = \Auth::User()->user_id;
+		$player = new PlayerModel();
+		$player->updateInfo($user_id);
+
+		return redirect('player/profile');
+	}
+
+	public function addInfo() {
+		$user_id = \Auth::User()->user_id;
+		$player = new PlayerModel();
+		$player->addInfo($user_id);
+		return redirect('player/profile');
+	}
+
 	public function getEditInfo($user_id) {
 		$player = new PlayerModel();
 		$dates = $player->getDates($user_id);
-		$allDates = [];
+		$pairs = [];
+		$ugly = '';
+		$pretty = '';
 		foreach ($dates as $date) {
-			$indyDate = Carbon::createFromFormat('Y-m-d', $date->created_at);
-			$allDates[] = $date->toFormattedDateString();
+			$ugly = $date->created_at;
+			$oneDate = Carbon::createFromFormat('Y-m-d', $date->created_at);
+			$pretty = $oneDate->toFormattedDateString();
+			$pairs[$ugly] = $pretty;
 		}
-		dd($allDates);
-		return $allDates;
+		return $pairs;
+	}
+
+	public function getInputValues($user_id, $date) {
+		$player = new PlayerModel();
+		$values = $player->getCurrentValues($user_id, $date);
+		return $values;
+	}
+
+	public function blankInput($user_id) {
+		$player = new PlayerModel(); 
+		$values = $player->getblankCategories($user_id);
+
+		return $values;
 	}
 
 	public function getAll($user_id)
@@ -67,19 +97,15 @@ class PlayerController extends Controller {
 
 	public function chartData($user_id, $metric)
 	{
-		//call model and get the info
-
 		$player = new PlayerModel();
 		$getChoice = $player->getGraphChoice($user_id, $metric);
 		$keys = [];
 		$values = [];
 		foreach ($getChoice as $pair) {
-
 			$date = Carbon::createFromFormat('Y-m-d', $pair->created_at);
 			$keys[] = $date->toFormattedDateString();
 			$values[] = $pair->{$metric};
 		}
-
 		return [$keys, $values];
 	}
 	

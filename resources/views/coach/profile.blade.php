@@ -20,8 +20,7 @@
 <section>
 	<h1>Please select a player and category</h1>
 	<div class="graph">
-		<canvas id="canvas" ></canvas>
-		<div id="lineLegend"></div>
+		<canvas id="canvas"></canvas>
 	</div>
 </section>
 @endsection

@@ -19,6 +19,9 @@ Route::get('home', 'HomeController@index');
 Route::get('player/profile', 'PlayerController@index');
 Route::get('player/addInfo', 'PlayerController@editAdd');
 
+Route::post('player/updateInfo', 'PlayerController@updateInfo');
+Route::post('player/addInfo', 'PlayerController@addInfo');
+
 Route::get('coach/profile', 'CoachController@index');
 
 Route::get('api/chartData/{user_id}/{metric}', 'PlayerController@chartData');
@@ -28,6 +31,8 @@ Route::get('api/coachChartData/{user_id}', 'CoachController@getAll');
 Route::get('api/coachChartData/{user_id}/{metric}', 'CoachController@getAll');
 
 Route::get('api/addPlayerInfo/{user_id}', 'PlayerController@getEditInfo');
+Route::get('api/addPlayerInfo/{user_id}/{date}', 'PlayerController@getInputValues');
+Route::get('api/blankInput/{user_id}', 'PlayerController@blankInput');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

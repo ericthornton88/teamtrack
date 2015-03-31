@@ -20,6 +20,16 @@ header {
 	left: 0;
 	background-color: $blue;
 
+	.title {
+		position: absolute;
+		top: 50%;
+		left: 39%;
+		transform: translate(0, -50%);
+		display: inline-block;
+		font-size: 40px;
+		color: $tan;
+	}
+
 	.nav-container {
 		position: relative;
 		width: 960px;
@@ -29,6 +39,7 @@ header {
 	}
 
 	.nav-logo > a {
+		display: inline-block;
 		font-size: 50px;
 		color: $tan;
 		&:hover {
@@ -67,9 +78,14 @@ main {
 	}
 }
 
+.row {
+	margin-top: -75px;
+}
+
 .hero {
 	height: 575px;
 	width: 1280px;
+	margin: 0 auto;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,rgba(0,0,0,0.55)), color-stop(10%,rgba(45, 66, 85, 0.35)), color-stop(100%,rgba(45, 66, 85, 0.15))), url('../img/FunnySportNerd.jpg') no-repeat;
 	background-size:cover;
 
@@ -146,19 +162,6 @@ footer {
 		bottom: 10px;
 		left: 10px;
 	}
-
-	.footer-links {
-
-		display: inline-block;
-		position: absolute;
-		bottom: 10px;
-		right: 10px;
-
-		a {
-			display: block;
-			color: $tan;
-		}
-	}
 }
 
 section {
@@ -167,15 +170,34 @@ section {
 	top: 0;
 	right: 0;
 	left: $nav-user-width;
-	background-color: $tan;
+	background-color:$tan;
 
+	h1 {
+		
+	}
+	
 	.graph {
-
 		position: absolute;
-		height: 500px;
-		width: 900px;
-		margin-left: 80px;
-		top: 100px;
+		margin-left: 25px;
+		height: 475px;
+		width: 950px;
+		top: 50px;
+	}
+
+	.current-category {
+		
+		display: inline-block;
+		background-color: yellow;
+		font-size: 30px;
+	}
+
+	.consistency-tracker{
+		position: absolute;
+		height: 150px;
+		background-color: white;
+		bottom: 0;
+		right: 0;
+		left: 0;
 	}
 }
 
@@ -185,7 +207,7 @@ section {
 	bottom: 0;
 	left: 0;
 	padding: 20px 0px;
-	background-color: #727272;
+	background-color: $blue;
 	width: $nav-user-width;
 	text-align: center;
 	color: $tan;
@@ -199,7 +221,7 @@ section {
 	}
 
 	.line {
-		background-color: $blue;
+		background-color: black;
 		width: $nav-user-width;
 		height: 5px;
 		margin: 20px 0px;
@@ -239,6 +261,10 @@ section {
 	top: 10px;
 	right: 10px;
 	z-index: 100;
+}
+
+.handleth {
+	display: block;
 }
 
 

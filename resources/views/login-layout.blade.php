@@ -14,14 +14,14 @@
 </head>
 <body>
 	
-	<div class="user-options">
+	{{-- <div class="user-options">
 		<div>User</div>
 		<div>
 			<div>Hey</div>
 			<div>there</div>
 			<div>hi</div>
 		</div>
-	</div>
+	</div> --}}
 
 	<div class="user-nav">
 		<img src="" alt="">
@@ -64,17 +64,9 @@
 	</div>
 
 		@yield('content')
-
+			
 		@section('footer')
 		
 		@show
-
-	<!-- <footer>
-		<div class="copyright">&copy Eric</div>
-		<div class="footer-links">
-			<a href="#">Home</a>
-			<a href="#">Login/Register</a>
-		</div>
-	</footer> -->
 </body>
 </html>

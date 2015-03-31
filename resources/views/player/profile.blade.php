@@ -5,7 +5,11 @@
 	<h1>Please select a category</h1>
 	<div class="graph">
 		<canvas id="canvas" ></canvas>
-		<div id="lineLegend"></div>
 	</div>
+	{{-- <div class="consistency-tracker">
+		<div>Dates Entered</div>
+		<div></div>
+		<div></div>
+	</div> --}}
 </section>
 @endsection

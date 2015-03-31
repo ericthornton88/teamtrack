@@ -18,6 +18,7 @@
 	<header>
 		<div class="nav-container">
 			<div class="nav-logo"><a href="/"><i class="fa fa-users"></i></a></div>
+			<div class="title">TEAM TRACK</div>
 			<nav>
 				{{-- <a href="#">Demo</a>
 				<a href="#">Products</a>
@@ -34,11 +35,7 @@
 		@show
 
 	<footer>
-		<div class="copyright">&copy Eric</div>
-		<div class="footer-links">
-			<a href="#">Home</a>
-			<a href="#">Login/Register</a>
-		</div>
+		<div class="copyright">&copy Copyright: Eric Thornton</div>
 	</footer>
 </body>
 </html>
