@@ -88,7 +88,7 @@ function getChartData (url) {
 
 $(function() {
 
-  	//Coach chooses player
+  	//Coach Profile: Coach selects player
   	$('.content').on('click', 'button', function(e) {
   	  	e.preventDefault();
   	  	$(this).parents('body').find('section > h1').remove();
@@ -106,7 +106,8 @@ $(function() {
 	  	$('body').find('.all-categories .overall input').prop('checked',true);
   	})
 
-  	//Get date for player to edit
+  	//Player Edit: Player chooses the date they want to edit
+  	//Input boxes are displayed
   	$('body').on('click', '#submit-date', function(e) {
   		e.preventDefault();
   	  	var value = $( "#date-dropdown option:selected" ).val();
@@ -127,7 +128,8 @@ $(function() {
   	  	})
   	})
 
-  	//Edit player entry
+  	//Player Edit: Player clicks edit
+  	//Date dropdown is generated
   	$('body').on('click', '#edit-entry', function() {
   	  	console.log('edit');
   	  	$(this).parent().find('#add-entry').remove();
@@ -140,7 +142,7 @@ $(function() {
 		})
   	})
   	
-  	//Add player entry
+  	//Generates input fields for player to add
   	$('body').on('click', '#add-entry', function() {
   	  	console.log('add');
   	  	$(this).parent().find('#edit-entry').remove();
