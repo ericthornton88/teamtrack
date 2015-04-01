@@ -39,7 +39,7 @@
 							<div class="form-group">
 								<label class="col-md-4 control-label">Phone</label>
 								<div class="col-md-6">
-									<input type="text" class="form-control" name="phone" value="{{ old('phone') }}">
+									<input type="text" class="form-control" name="phone" value="1234567899">
 								</div>
 							</div>
 

@@ -15,6 +15,9 @@ button {
 .initial-hide {
   visibility: hidden; }
 
+.pop-up-hide {
+  visibility: hidden; }
+
 /****************************************
   Home Page
 *****************************************/
@@ -257,7 +260,9 @@ section {
   text-align: center;
   color: #DCDCD4; }
   .user-nav select {
-    font-size: 20px; }
+    font-size: 20px;
+    color: #055DAD;
+    font-weight: bold; }
   .user-nav img {
     position: relative;
     height: 100px;
@@ -313,3 +318,15 @@ section {
   padding: 30px;
   top: 275px;
   margin-left: 380px; }
+
+.input-pop-up {
+  position: absolute;
+  left: 710px;
+  top: 275px;
+  padding: 10px;
+  display: inline-block;
+  background-color: #ADBCC3;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; }

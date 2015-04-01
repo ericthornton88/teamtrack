@@ -97,7 +97,6 @@ $(function() {
   	  	hidden_id.remove();
   	  	var hidden_id_parent = $(this).parents('.user-nav').find('.all-categories .container-title')
   		$(hidden_id_parent).append("<input id=\"hidden-id\"type=\"hidden\" value=" + value + ">");
-  	  	console.log('here');
   	  	var url = "/api/chartData/" + value;
   	  	getChartData(url);
   	  	$('body').find('.current-category').remove()
@@ -131,7 +130,6 @@ $(function() {
   	//Player Edit: Player clicks edit
   	//Date dropdown is generated
   	$('body').on('click', '#edit-entry', function() {
-  	  	console.log('edit');
   	  	$(this).parent().find('#add-entry').remove();
   	  	$(this).remove();
   	  	$('.input-form-values.initial-hide').removeClass();
@@ -203,5 +201,63 @@ $(function() {
 	  	var new_category = '<div class="current-category">' + value + '</div>'
 	  	$('section').prepend(new_category);
 	})
+
+	function legendPopUp (base_value, scale) {
+		return('<div>Base Value: ' + base_value + '</div><div>Scale: ' + scale + '</div>')
+	}
+
+	function removeAndEmpty (pop_up) {
+		pop_up.removeClass('pop-up-hide');
+		pop_up.empty();
+	}
+
+	$('section').on('click', '.sleep_length_input', function() {
+		var pop_up = $('section').find('.input-pop-up');
+		removeAndEmpty(pop_up);
+		pop_up.prepend(legendPopUp('8 hours','-4 to 4'));
+	})
+
+	$('section').on('click', '.sleep_quality_input', function() {
+		var pop_up = $('section').find('.input-pop-up')
+		removeAndEmpty(pop_up);
+		pop_up.prepend(legendPopUp('Normal','-1 to 1'))
+	})
+
+	$('section').on('click', '.tiredness_sensation_input', function() {
+		var pop_up = $('section').find('.input-pop-up');
+		removeAndEmpty(pop_up);
+		pop_up.prepend(legendPopUp('Normal','-1 to 1'));
+	})
+
+	$('section').on('click', '.training_willingness_input', function() {
+		var pop_up = $('section').find('.input-pop-up');
+		removeAndEmpty(pop_up);
+		pop_up.prepend(legendPopUp('Normal','-2 to 2'));
+	})
+
+	$('section').on('click', '.appetite_input', function() {
+		var pop_up = $('section').find('.input-pop-up');
+		removeAndEmpty(pop_up);
+		pop_up.prepend(legendPopUp('Normal','-2 to 2'));
+	})
+
+	$('section').on('click', '.soreness_input', function() {
+		var pop_up = $('section').find('.input-pop-up');
+		removeAndEmpty(pop_up);
+		pop_up.prepend(legendPopUp('Slight','-3 to 1'));
+	})
+
+	$('section').on('click', '.nutrition_input', function() {
+		var pop_up = $('section').find('.input-pop-up');
+		removeAndEmpty(pop_up);
+		pop_up.prepend(legendPopUp('Ate Breakfast','-1 to 1'));
+	})
+
+	$('section').on('click', '.created_at_input', function() {
+		var pop_up = $('section').find('.input-pop-up');
+		removeAndEmpty(pop_up);
+		pop_up.prepend('<div>Please input y-m-d:</div><div>Exp: 2000-01-31</div>');
+	})
+
 })
 

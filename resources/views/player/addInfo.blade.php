@@ -17,7 +17,7 @@
 		</div>
 	</div>
 	<input id="get-dates-id" type="hidden" value="{{Auth::User()->user_id}}">
-
+	<div class="input-pop-up pop-up-hide"></div>
 	<div id="edit-entry">
 		<h2>EDIT</h2>
 	</div>
@@ -46,14 +46,14 @@
 <script id="template-input-values" type="text/x-handlebars-template">
 	<div class="handleth">
 		<label>@{{pname}}: </label>
-		<input type="text" name="@{{uname}}"value="@{{value}}">
+		<input type="text" name="@{{uname}}"value="@{{value}}" class="@{{uname}}_input"=>
 	</div>
 </script>
 
 <script id="template-blank-input" type="text/x-handlebars-template">
 	<div class="handleth">
 		<label>@{{pname}}: </label>
-		<input type="text" name="@{{uname}}">
+		<input type="text" name="@{{uname}}" class="@{{uname}}_input">
 	</div>
 </script>
 
