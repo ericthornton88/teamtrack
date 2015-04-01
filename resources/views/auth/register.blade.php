@@ -25,14 +25,14 @@
 							<div class="form-group">
 								<label class="col-md-4 control-label">First Name</label>
 								<div class="col-md-6">
-									<input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}">
+									<input type="text" class="form-control" name="first_name" value="Marshawn">
 								</div>
 							</div>
 
 							<div class="form-group">
 								<label class="col-md-4 control-label">Last Name</label>
 								<div class="col-md-6">
-									<input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}">
+									<input type="text" class="form-control" name="last_name" value="Lynch">
 								</div>
 							</div>
 
@@ -46,7 +46,7 @@
 							<div class="form-group">
 								<label class="col-md-4 control-label">E-Mail Address</label>
 								<div class="col-md-6">
-									<input type="email" class="form-control" name="email" value="{{ old('email') }}">
+									<input type="email" class="form-control" name="email" value="beastmode@bm.com">
 								</div>
 							</div>
 
@@ -63,14 +63,14 @@
 							<div class="form-group">
 								<label class="col-md-4 control-label">Password</label>
 								<div class="col-md-6">
-									<input type="password" class="form-control" name="password">
+									<input type="password" class="form-control" name="password" value="password">
 								</div>
 							</div>
 
 							<div class="form-group">
 								<label class="col-md-4 control-label">Confirm Password</label>
 								<div class="col-md-6">
-									<input type="password" class="form-control" name="password_confirmation">
+									<input type="password" class="form-control" name="password_confirmation" value="password">
 								</div>
 							</div>
 
