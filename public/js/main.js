@@ -6,6 +6,8 @@ String.prototype.toProperCase = function () {
     return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 };
 
+var chartData = [];
+
 /****************************************
   Handlebars
 *****************************************/
@@ -56,11 +58,10 @@ var renderBlankInputValues = function(data) {
 	appendHere.append(renderBlankValues(data));
 }
 
-/****************************************
-  Chart Render
-*****************************************/
 
-var chartData = [];
+/****************************************
+  AJAX Calls
+*****************************************/
 
 function getChartData (url) {
 	$.get( url , function( data ) {
@@ -84,28 +85,8 @@ function getChartData (url) {
 	});
 };
 
-/****************************************
-  AJAX Calls
-*****************************************/
-
 
 $(function() {
-
-	//Select Category
-  	$('input').on('click', function() {
-  		$(this).parents('body').find('section > h1').remove();
-  		var container = $(this).parents('.all-categories').find('.container-title');
-  		var find_hidden = container.find('#hidden-id');
-
-  		var metric = $(this).val();
-
-  		if (metric == 'overall') {
-  			var url = "/api/chartData/" + find_hidden.val()
-  		} else {
-  			var url = "/api/chartData/" + find_hidden.val() + "/" + metric
-  		}
-  		getChartData(url);
-  	})
 
   	//Coach chooses player
   	$('.content').on('click', 'button', function(e) {
@@ -190,6 +171,22 @@ $(function() {
 
 
 $(function() {
+
+	//Select Category
+  	$('input').on('click', function() {
+  		$(this).parents('body').find('section > h1').remove();
+  		var container = $(this).parents('.all-categories').find('.container-title');
+  		var find_hidden = container.find('#hidden-id');
+
+  		var metric = $(this).val();
+
+  		if (metric == 'overall') {
+  			var url = "/api/chartData/" + find_hidden.val()
+  		} else {
+  			var url = "/api/chartData/" + find_hidden.val() + "/" + metric
+  		}
+  		getChartData(url);
+  	})
 
 	//Navigation button
 	$('section').on('click', '.user-nav-button', function() {
