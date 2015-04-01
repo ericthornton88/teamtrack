@@ -57,11 +57,4 @@
 	</div>
 </script>
 
-<script id="template-input-values-backup" type="text/x-handlebars-template">
-	@{{#each data}}
-		<div>@{{@key}} : </div>
-		<input class="handleth" type="text" value="@{{this}}">
-	@{{/each}}
-</script>
-
 @endsection

@@ -91,18 +91,6 @@ function getChartData (url) {
 
 $(function() {
 
-	$('section').on('click', '.user-nav-button', function() {
-	  	$(this).parent().find('.user-nav-list').toggleClass('initial-hide');
-	})
-
-	$('.all-categories').on('click', 'input', function() {
-	  	var value = $(this).parent().text()
-	  	console.log(value)
-	  	$('section').find('.current-category').remove()
-	  	var new_category = '<div class="current-category">' + value + '</div>'
-	  	$('section').prepend(new_category);
-	})
-
   	$('input').on('click', function() {
   		$(this).parents('body').find('section > h1').remove();
   		var container = $(this).parents('.all-categories').find('.container-title');
@@ -195,6 +183,19 @@ $(function() {
 
 
 $(function() {
+
+	$('section').on('click', '.user-nav-button', function() {
+	  	$(this).parent().find('.user-nav-list').toggleClass('initial-hide');
+	})
+
+	$('.all-categories').on('click', 'input', function() {
+	  	var value = $(this).parent().text()
+	  	console.log(value)
+	  	$('section').find('.current-category').remove()
+	  	var new_category = '<div class="current-category">' + value + '</div>'
+	  	$('section').prepend(new_category);
+	})
+
   	$('.btn-group').on('click', function() {
   	  	$('.dropdown-menu').toggleClass('expand-btn-group')
   	})

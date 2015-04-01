@@ -1,3 +1,8 @@
+/****************************************
+  Universal Settings
+*****************************************/
+
+
 $nav-user-width: 250px;
 $gray: #ADBCC3;
 $blue: #2D4255;
@@ -20,6 +25,14 @@ button {
 	font-weight: bold;
 }
 
+.initial-hide {
+	visibility: hidden;
+}
+
+
+/****************************************
+  Home Page
+*****************************************/
 
 
 
@@ -79,6 +92,25 @@ header {
 	}
 }
 
+.nav-container {
+
+	> div:first-child {
+		font-size: 12px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		margin-left: 10px;
+	}
+
+	div {
+		text-align: left;
+	}
+
+	input {
+		margin: 10px;
+		
+	}
+}
+
 main {
 	height: 510px;
 	position: relative;
@@ -117,9 +149,6 @@ main {
 	}
 }
 
-.feature {
-
-}
 
 .main-container {
 	width: 960px;
@@ -173,6 +202,12 @@ footer {
 	}
 }
 
+
+/****************************************
+  Profile
+*****************************************/
+
+
 section {
 	position: absolute;
 	bottom: 0;
@@ -192,13 +227,6 @@ section {
 	.coach-h1 {
 		left: 250px;
 	}
-
-	// button {
-	// 	padding: 3px;
-	// 	border-radius: 5px;
-	// 	border: 1px solid $tan;
-	// 	background-color: $tan;
-	// }
 	
 	.graph {
 		position: absolute;
@@ -253,14 +281,14 @@ section {
 	.user-nav-button {
 		position: relative;
 		display: inline-block;
-		border-radius: 5px;
+		border-radius: 3px;
 		right: 0px;
 		text-align: center;
 		background-color: $gray;
 		padding: 3px 15px;
 
 		&:hover {
-			background-color: $red;
+			background-color: white;
 		}
 
 		.fa {
@@ -274,6 +302,7 @@ section {
 		z-index: 1;
 		padding: 15px;
 		border-radius: 3px;
+		margin-top: 5px;
 
 		a {
 			display: block;
@@ -366,24 +395,18 @@ section {
 	}
 }
 
-.nav-container {
-
-	> div:first-child {
-		font-size: 12px;
-		font-weight: bold;
-		margin-bottom: 10px;
-		margin-left: 10px;
-	}
-
-	div {
-		text-align: left;
-	}
-
-	input {
-		margin: 10px;
-		
-	}
+.user-options {
+	position: absolute;
+	display: inline-block;
+	top: 10px;
+	right: 10px;
+	z-index: 100;
 }
+
+/****************************************
+  Edit/Add Page
+*****************************************/
+
 
 #edit-entry, #add-entry {
 	display: inline-block;
@@ -401,6 +424,14 @@ section {
 	}
 }
 
+#date-dropdown {
+	font-size: 20px;
+}
+
+.handleth {
+	padding: 10px;
+}
+
 .temp-dropdown-menu{
 	display: inline-block;
 	position: relative;
@@ -411,43 +442,11 @@ section {
 	margin-left: 380px;
 }
 
-// #template-input-values {
-// 	label{
-//     display: inline-block;
-//     float: left;
-//     clear: left;
-//     width: 250px;
-//     text-align: right;
-// 	}
-// 	input {
-// 	  display: inline-block;
-// 	  float: left;
-// 	}
-// }
 
-#date-dropdown {
-	font-size: 20px;
-}
 
-.active {
-	background-color: yellow;
-}
 
-.initial-hide {
-	visibility: hidden;
-}
 
-.user-options {
-	position: absolute;
-	display: inline-block;
-	top: 10px;
-	right: 10px;
-	z-index: 100;
-}
 
-.handleth {
-	padding: 10px;
-}
 
 
 

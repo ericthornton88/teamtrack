@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Dueling Decisions</title>
+	<title>Team Track</title>
 	<link rel="stylesheet" href="<?php echo asset('css/app.css')?>" type="text/css">
 	<link rel="stylesheet" href="<?php echo asset('css/styles.css')?>" type="text/css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -20,19 +20,12 @@
 			<div class="nav-logo"><a href="/"><i class="fa fa-users"></i></a></div>
 			<div class="title">TEAM TRACK</div>
 			<nav>
-				{{-- <a href="#">Demo</a>
-				<a href="#">Products</a>
-				<a href="#">About Us</a> --}}
 				<a href="/auth/login">Login</a>
 			</nav>
 		</div>
 	</header>
 
 		@yield('content')
-
-		@section('footer')
-		
-		@show
 
 	<footer>
 		<div class="copyright">&copy Copyright: Eric Thornton</div>

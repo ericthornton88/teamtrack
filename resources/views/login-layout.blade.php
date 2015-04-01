@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Dueling Decisions</title>
+	<title>Team Track</title>
 	<link rel="stylesheet" href="<?php echo asset('css/app.css')?>" type="text/css">
 	<link rel="stylesheet" href="<?php echo asset('css/styles.css')?>" type="text/css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -13,16 +13,6 @@
 	<script src="../js/main.js"></script>
 </head>
 <body>
-	
-	{{-- <div class="user-options">
-		<div>User</div>
-		<div>
-			<div>Hey</div>
-			<div>there</div>
-			<div>hi</div>
-		</div>
-	</div> --}}
-
 	<div class="user-nav">
 		<img src="/img/FunnySportNerdProfile.jpg">
 		<div class="name">Hello {{ Auth::User()->first_name }}</div>

@@ -1,3 +1,6 @@
+/****************************************
+  Universal Settings
+*****************************************/
 * {
   font-family: PT Sans; }
 
@@ -9,6 +12,12 @@ button {
   color: #055DAD;
   font-weight: bold; }
 
+.initial-hide {
+  visibility: hidden; }
+
+/****************************************
+  Home Page
+*****************************************/
 header {
   height: 75px;
   right: 0px;
@@ -54,6 +63,16 @@ header {
         color: #E93C4F; }
     header nav > * + * {
       margin-left: 20px; }
+
+.nav-container > div:first-child {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 10px; }
+.nav-container div {
+  text-align: left; }
+.nav-container input {
+  margin: 10px; }
 
 main {
   height: 510px;
@@ -118,6 +137,9 @@ footer {
     bottom: 10px;
     left: 10px; }
 
+/****************************************
+  Profile
+*****************************************/
 section {
   position: absolute;
   bottom: 0;
@@ -174,13 +196,13 @@ section {
   .user-nav-button-holder .user-nav-button {
     position: relative;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 3px;
     right: 0px;
     text-align: center;
     background-color: #ADBCC3;
     padding: 3px 15px; }
     .user-nav-button-holder .user-nav-button:hover {
-      background-color: #E93C4F; }
+      background-color: white; }
     .user-nav-button-holder .user-nav-button .fa {
       font-size: 35px; }
   .user-nav-button-holder .user-nav-list {
@@ -188,7 +210,8 @@ section {
     background-color: white;
     z-index: 1;
     padding: 15px;
-    border-radius: 3px; }
+    border-radius: 3px;
+    margin-top: 5px; }
     .user-nav-button-holder .user-nav-list a {
       display: block;
       text-align: left;
@@ -253,16 +276,16 @@ section {
     height: 5px;
     margin: 20px 0px; }
 
-.nav-container > div:first-child {
-  font-size: 12px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-left: 10px; }
-.nav-container div {
-  text-align: left; }
-.nav-container input {
-  margin: 10px; }
+.user-options {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  z-index: 100; }
 
+/****************************************
+  Edit/Add Page
+*****************************************/
 #edit-entry, #add-entry {
   display: inline-block;
   position: relative;
@@ -276,6 +299,12 @@ section {
     font-size: 100px;
     font-weight: bold; }
 
+#date-dropdown {
+  font-size: 20px; }
+
+.handleth {
+  padding: 10px; }
+
 .temp-dropdown-menu {
   display: inline-block;
   position: relative;
@@ -284,22 +313,3 @@ section {
   padding: 30px;
   top: 275px;
   margin-left: 380px; }
-
-#date-dropdown {
-  font-size: 20px; }
-
-.active {
-  background-color: yellow; }
-
-.initial-hide {
-  visibility: hidden; }
-
-.user-options {
-  position: absolute;
-  display: inline-block;
-  top: 10px;
-  right: 10px;
-  z-index: 100; }
-
-.handleth {
-  padding: 10px; }
