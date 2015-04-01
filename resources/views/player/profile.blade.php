@@ -28,7 +28,7 @@
 			</div>
 			<div>
 				<h1>15</h1>
-				<p>Streak Long</p>
+				<p>Longest Streak</p>
 			</div>	
 		</div>
 	</div>

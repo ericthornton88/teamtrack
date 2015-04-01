@@ -10,17 +10,17 @@
 		<div class="feature-container">
 			<div class="img"><i class="fa fa-line-chart"></i></div>
 			<div class="title">Analytics</div>
-			<div class="content">On point visuals that give you the quick insights you need.</div>
+			<div class="content">Visuals that give you the quick insights you need.</div>
 		</div>
 		<div class="feature-container">
 			<div class="img"><i class="fa fa-check"></i></div>
 			<div class="title">Simple</div>
-			<div class="content">Easy to use interface that still covers all your needs</div>
+			<div class="content">Easy to use interface that still covers all your needs.</div>
 		</div>
 		<div class="feature-container">
 			<div class="img"><i class="fa fa-question-circle"></i></div>
 			<div class="title">Support</div>
-			<div class="content">Easy to work with support staff that makes work flow</div>
+			<div class="content">Easy to work with support staff that knows their stuff.</div>
 		</div>
 		</div>
 	</div>

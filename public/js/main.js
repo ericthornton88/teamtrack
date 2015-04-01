@@ -38,7 +38,7 @@ var renderBlankValues = function(data) {
 }
 
 /****************************************
-  Call Handlebars
+  Handlebars Render
 *****************************************/
 
 
@@ -91,6 +91,7 @@ function getChartData (url) {
 
 $(function() {
 
+	//Select Category
   	$('input').on('click', function() {
   		$(this).parents('body').find('section > h1').remove();
   		var container = $(this).parents('.all-categories').find('.container-title');
@@ -106,6 +107,7 @@ $(function() {
   		getChartData(url);
   	})
 
+  	//Coach chooses player
   	$('.content').on('click', 'button', function(e) {
   	  	e.preventDefault();
   	  	$(this).parents('body').find('section > h1').remove();
@@ -120,8 +122,31 @@ $(function() {
   	  	$('body').find('.current-category').remove()
   	  	var new_category = '<div class="current-category">Overall</div>'
 	  	$('section').prepend(new_category);
+	  	$('body').find('.all-categories .overall input').prop('checked',true);
   	})
 
+  	//Get date for player to edit
+  	$('body').on('click', '#submit-date', function(e) {
+  		e.preventDefault();
+  	  	var value = $( "#date-dropdown option:selected" ).val();
+  	  	var user_id = $('body').find('#get-dates-id').val();
+  	  	$('body').find('.temp-dropdown-menu').remove()
+  	  	$.get("/api/addPlayerInfo/" + user_id + "/" + value, function(data) {
+  	  		var d = data[0];
+  	  		var values = $.map(d, function(el) { return el; });
+  	  		var keys = Object.keys(d);
+  	  		for (var i = 0; i < keys.length; i++) {
+  	  			var key = keys[i];
+			    var newKey = keys[i].split('_');
+			    var newKeyString = newKey.join(' ');
+			    newKeyString = newKeyString.toProperCase();
+			    renderInputValues({pname: newKeyString, value:d[key], uname:key});
+			}
+			$('body').find('.input-form').append('<button>Submit</button>');
+  	  	})
+  	})
+
+  	//Edit player entry
   	$('body').on('click', '#edit-entry', function() {
   	  	console.log('edit');
   	  	$(this).parent().find('#add-entry').remove();
@@ -133,7 +158,8 @@ $(function() {
   	  		renderDateDropdown(data);
 		})
   	})
-
+  	
+  	//Add player entry
   	$('body').on('click', '#add-entry', function() {
   	  	console.log('add');
   	  	$(this).parent().find('#edit-entry').remove();
@@ -155,25 +181,6 @@ $(function() {
   	  	})
   	})
 
-  	$('body').on('click', '#submit-date', function(e) {
-  		e.preventDefault();
-  	  	var value = $( "#date-dropdown option:selected" ).val();
-  	  	var user_id = $('body').find('#get-dates-id').val();
-  	  	$('body').find('.temp-dropdown-menu').remove()
-  	  	$.get("/api/addPlayerInfo/" + user_id + "/" + value, function(data) {
-  	  		var d = data[0];
-  	  		var values = $.map(d, function(el) { return el; });
-  	  		var keys = Object.keys(d);
-  	  		for (var i = 0; i < keys.length; i++) {
-  	  			var key = keys[i];
-			    var newKey = keys[i].split('_');
-			    var newKeyString = newKey.join(' ');
-			    newKeyString = newKeyString.toProperCase();
-			    renderInputValues({pname: newKeyString, value:d[key], uname:key});
-			}
-			$('body').find('.input-form').append('<button>Submit</button>');
-  	  	})
-  	})
 
 })
 
@@ -184,10 +191,12 @@ $(function() {
 
 $(function() {
 
+	//Navigation button
 	$('section').on('click', '.user-nav-button', function() {
 	  	$(this).parent().find('.user-nav-list').toggleClass('initial-hide');
 	})
 
+	//Display category at top of graph
 	$('.all-categories').on('click', 'input', function() {
 	  	var value = $(this).parent().text()
 	  	console.log(value)
@@ -195,9 +204,5 @@ $(function() {
 	  	var new_category = '<div class="current-category">' + value + '</div>'
 	  	$('section').prepend(new_category);
 	})
-
-  	$('.btn-group').on('click', function() {
-  	  	$('.dropdown-menu').toggleClass('expand-btn-group')
-  	})
 })
 
