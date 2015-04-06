@@ -37,6 +37,11 @@ class PlayerController extends Controller {
 		return redirect('player/profile');
 	}
 
+	/****************************************
+	  Player Edit/Add Methods
+	*****************************************/
+	
+
 	public function addInfo() {
 		$user_id = \Auth::User()->user_id;
 		$player = new PlayerModel();
@@ -59,18 +64,23 @@ class PlayerController extends Controller {
 		return $pairs;
 	}
 
-	public function getInputValues($user_id, $date) {
-		$player = new PlayerModel();
-		$values = $player->getCurrentValues($user_id, $date);
-		return $values;
-	}
-
 	public function blankInput($user_id) {
 		$player = new PlayerModel(); 
 		$values = $player->getblankCategories($user_id);
 
 		return $values;
 	}
+
+	public function getInputValues($user_id, $date) {
+		$player = new PlayerModel();
+		$values = $player->getCurrentValues($user_id, $date);
+		return $values;
+	}
+
+	/****************************************
+	  Graph Render Methods
+	*****************************************/
+	
 
 	public function getAll($user_id)
 	{

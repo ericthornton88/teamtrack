@@ -15,7 +15,15 @@
 <body>
 	<div class="user-nav">
 		<img src="/img/FunnySportNerdProfile.jpg">
-		<div class="name">Hello {{ Auth::User()->first_name }}</div>
+		<?php 
+			if (Auth::User()->is_admin == 1) {
+				$welcome = 'Hello Coach';
+			} else {
+				$welcome = 'Hello';
+			}
+
+		?>
+		<div class="name">{{$welcome}} {{ Auth::User()->first_name }}</div>
 		<div class="line"></div>
 		<div class="nav-container">
 			@section('time-player')

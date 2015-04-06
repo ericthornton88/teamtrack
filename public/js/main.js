@@ -88,23 +88,6 @@ function getChartData (url) {
 
 $(function() {
 
-  	//Coach Profile: Coach selects player
-  	$('.content').on('click', 'button', function(e) {
-  	  	e.preventDefault();
-  	  	$(this).parents('body').find('section > h1').remove();
-  	  	var value = $( "#coach-choose-player option:selected" ).val();
-  	  	var hidden_id = $(this).parents('.user-nav').find('#hidden-id')
-  	  	hidden_id.remove();
-  	  	var hidden_id_parent = $(this).parents('.user-nav').find('.all-categories .container-title')
-  		$(hidden_id_parent).append("<input id=\"hidden-id\"type=\"hidden\" value=" + value + ">");
-  	  	var url = "/api/chartData/" + value;
-  	  	getChartData(url);
-  	  	$('body').find('.current-category').remove()
-  	  	var new_category = '<div class="current-category">Overall</div>'
-	  	$('section').prepend(new_category);
-	  	$('body').find('.all-categories .overall input').prop('checked',true);
-  	})
-
   	//Player Edit: Player chooses the date they want to edit
   	//Input boxes are displayed
   	$('body').on('click', '#submit-date', function(e) {
@@ -203,7 +186,7 @@ $(function() {
 	})
 
 	function legendPopUp (base_value, scale) {
-		return('<div>Base Value: ' + base_value + '</div><div>Scale: ' + scale + '</div>')
+		return('<div>' + base_value + ' = 0</div><div>Scale: ' + scale + '</div>')
 	}
 
 	function removeAndEmpty (pop_up) {
@@ -211,6 +194,28 @@ $(function() {
 		pop_up.empty();
 	}
 
+	//Coach Profile: Coach selects player
+  	$('.content').on('click', 'button', function(e) {
+  	  	e.preventDefault();
+  	  	$(this).parents('body').find('section > h1').remove();
+  	  	var value = $( "#coach-choose-player option:selected" ).val();
+  	  	var hidden_id = $(this).parents('.user-nav').find('#hidden-id')
+  	  	hidden_id.remove();
+  	  	var hidden_id_parent = $(this).parents('.user-nav').find('.all-categories .container-title')
+  		$(hidden_id_parent).append("<input id=\"hidden-id\"type=\"hidden\" value=" + value + ">");
+  	  	var url = "/api/chartData/" + value;
+  	  	getChartData(url);
+  	  	$('body').find('.current-category').remove()
+  	  	var new_category = '<div class="current-category">Overall</div>'
+	  	$('section').prepend(new_category);
+	  	$('body').find('.all-categories .overall input').prop('checked',true);
+  	})
+
+
+	/****************************************
+	  Legend Rendering on player add/edit
+	*****************************************/
+	
 	$('section').on('click', '.sleep_length_input', function() {
 		var pop_up = $('section').find('.input-pop-up');
 		removeAndEmpty(pop_up);
@@ -220,7 +225,7 @@ $(function() {
 	$('section').on('click', '.sleep_quality_input', function() {
 		var pop_up = $('section').find('.input-pop-up')
 		removeAndEmpty(pop_up);
-		pop_up.prepend(legendPopUp('Normal','-1 to 1'))
+		pop_up.prepend(legendPopUp('Normal','-2 to 2'))
 	})
 
 	$('section').on('click', '.tiredness_sensation_input', function() {
